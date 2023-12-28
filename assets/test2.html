@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mobile Keyboard Inputs</title>
+    <style>
+    html,body{
+        /* height:100%; */
+    }
+    html{
+        background-color:orange;
+    }
+    body{
+        background-color:green;
+    }
+    body * {
+        background-color:yellow;
+    }
+    .container{
+        position:relative;
+        height:100%;
+    }
+    .btnBottom{
+        position:fixed;
+        width:100%;
+        bottom:0;
+        left:0;
+    }
+         h2 {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white; /* 타이틀 배경색을 설정 */
+            padding: 10px; /* 타이틀 여백 설정 */
+            margin: 0; /* 기본 마진 제거 */
+        }
+        input {
+            margin-bottom: 10px; /* 각 input 요소 사이에 여백 추가 */
+            width: calc(100% - 20px); /* 화면 가로폭에서 20px을 뺀 만큼의 너비로 설정 */
+            padding: 5px; /* 각 input 요소의 여백 설정 */
+        }
+    </style>
+</head>
+<body>
+
+<h2>Mobile Keyboard Inputs Example</h2>
+
+<div class="container">
+<form action="/submit" method="post">
+        <label for="input0">Input Box 0:</label>
+        <input type="text" id="input0" name="input0" placeholder="Type something..." />
+
+        <br>
+
+        <label for="input1">Input Box 1:</label>
+        <input type="text" id="input1" name="input1" placeholder="Type something..." />
+
+        <br>
+
+        <label for="input2">Input Box 2:</label>
+        <input type="number" id="input2" name="input2" pattern="\d*" placeholder="number" />
+
+        <br>
+
+        <label for="input3">Input Box 3:</label>
+        <input type="number" id="input3" name="input3" pattern="\d*" placeholder="number" />
+
+        <br>
+
+        <button type="submit" class="btnBottom">버튼</button>
+</form>
+</div>
+
+</body>
+</html>
